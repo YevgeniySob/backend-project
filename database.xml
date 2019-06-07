@@ -89,9 +89,9 @@
     <row name="time" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="id_locations" null="1" autoincrement="0">
+    <row name="id_state" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="locations" row="id" />
+      <default>NULL</default><relation table="state" row="id" />
     </row>
     <key type="PRIMARY" name="">
       <part>id</part>
@@ -113,16 +113,17 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1003" y="456" name="locations">
+  <table x="1002" y="456" name="state">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="country_name" null="1" autoincrement="0">
+    <row name="name" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="city" null="1" autoincrement="0">
+    <row name="id_country" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><relation table="country" row="id" />
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -195,10 +196,27 @@
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
+    <row name="longitude" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="latitude" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
     <row name="id_reports" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="reports" row="id" />
     </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1212" y="504" name="country">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
