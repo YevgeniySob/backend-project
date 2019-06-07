@@ -1,4 +1,4 @@
-# README
+Backend part of last project for Flatiron School
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
