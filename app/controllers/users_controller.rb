@@ -1,11 +1,23 @@
 class UsersController < ApplicationController
-  
-  before_action :find_user, only: [:show, :update, :delete]
 
-  def show; end
+  before_action :find_user, only: %i[show update delete]
+
+  def show
+    render json: @user
+  end
+
+  def index
+    @reports = Report.all
+    render json: @reports
+  end
 
   def create
-
+    @user = User.new(first_name: params[:first_name], last_name: params[:last_name], username: params[:username], password: params[:password], email: params[:email])
+    if @user.save
+      render json: @user
+    else
+      puts 'blah'
+    end
   end
 
   def update

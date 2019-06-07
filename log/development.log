@@ -6754,3 +6754,621 @@ Migrating to CreateStates (20190607013312)
   [1m[36mReport Load (0.6ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" ORDER BY "reports"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 30], ["LIMIT", 1]]
   [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" ORDER BY "reports"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-06-07 10:18:26 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for ::1 at 2019-06-07 10:18:31 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ReportsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/reports" for ::1 at 2019-06-07 10:19:10 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mReport Load (81.3ms)[0m  [1m[34mSELECT "reports".* FROM "reports"[0m
+  ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.21ms)
+Completed 200 OK in 175ms (Views: 55.7ms | ActiveRecord: 96.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-07 10:19:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/reports" for ::1 at 2019-06-07 10:19:14 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mReport Load (0.7ms)[0m  [1m[34mSELECT "reports".* FROM "reports"[0m
+  ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user?id=1" for ::1 at 2019-06-07 10:24:43 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/actionpack-5.2.3/lib/action_dispatch/middleware/callbacks.rb:28
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (33.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39
+[active_model_serializers]   [1m[36mUserGeolocation Load (8.1ms)[0m  [1m[34mSELECT  "user_geolocations".* FROM "user_geolocations" WHERE "user_geolocations"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (63.44ms)
+Completed 200 OK in 24900ms (Views: 109.8ms | ActiveRecord: 94.3ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-07 10:25:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user?id=1" for ::1 at 2019-06-07 10:25:12 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39
+[active_model_serializers]   [1m[36mUserGeolocation Load (0.5ms)[0m  [1m[34mSELECT  "user_geolocations".* FROM "user_geolocations" WHERE "user_geolocations"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+Completed 200 OK in 7988ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/report?id=1" for ::1 at 2019-06-07 10:31:43 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReport Load (2.1ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (2.1ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (1.0ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (89.55ms)
+Completed 200 OK in 125ms (Views: 69.1ms | ActiveRecord: 36.6ms)
+
+
+Started GET "/report?id=2" for ::1 at 2019-06-07 10:32:48 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 2]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.3ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (8.01ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/report?id=3" for ::1 at 2019-06-07 10:32:51 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReport Load (0.5ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (6.45ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/report?id=3" for ::1 at 2019-06-07 10:34:28 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (79.41ms)
+Completed 200 OK in 110ms (Views: 60.6ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/report?id=3" for ::1 at 2019-06-07 10:35:31 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.4ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (122.85ms)
+Completed 200 OK in 145ms (Views: 77.9ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/report?id=3" for ::1 at 2019-06-07 10:35:53 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (1.0ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (100.34ms)
+Completed 200 OK in 141ms (Views: 56.4ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/report?id=3" for ::1 at 2019-06-07 10:36:31 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReport Load (0.2ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reports_controller.rb:29
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ReportSerializer with ActiveModelSerializers::Adapter::Attributes (63.58ms)
+Completed 200 OK in 83ms (Views: 43.1ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/user?id=3" for ::1 at 2019-06-07 10:36:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+[active_model_serializers]   [1m[36mUserGeolocation Load (0.4ms)[0m  [1m[34mSELECT  "user_geolocations".* FROM "user_geolocations" WHERE "user_geolocations"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (27.85ms)
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/user?id=3" for ::1 at 2019-06-07 10:37:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+[active_model_serializers]   [1m[36mUserGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "user_geolocations".* FROM "user_geolocations" WHERE "user_geolocations"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.0ms)
+Completed 200 OK in 63ms (Views: 9.9ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/user?id=3" for ::1 at 2019-06-07 10:37:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+[active_model_serializers]   [1m[36mUserGeolocation Load (0.3ms)[0m  [1m[34mSELECT  "user_geolocations".* FROM "user_geolocations" WHERE "user_geolocations"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.24ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reports" for ::1 at 2019-06-07 10:38:15 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT "reports".* FROM "reports"[0m
+  ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 2]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (3.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 3]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 4]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.4ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 5]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 6]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 7]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 8]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 9]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 10]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 11]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 12]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.3ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 13]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 14]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 15]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 16]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 17]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 18]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 19]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 20]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 21]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 22]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 23]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 24]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 25]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 26]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 27]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 28]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 29]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.2ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."report_id" = $1[0m  [["report_id", 30]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mReportGeolocation Load (0.1ms)[0m  [1m[34mSELECT  "report_geolocations".* FROM "report_geolocations" WHERE "report_geolocations"."report_id" = $1 LIMIT $2[0m  [["report_id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers]   [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."report_id" = $1 LIMIT $2[0m  [["report_id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/yevgeniy/.rvm/gems/ruby-2.6.1/gems/active_model_serializers-0.10.9/lib/active_model/serializer.rb:389
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (223.95ms)
+Completed 200 OK in 245ms (Views: 192.5ms | ActiveRecord: 49.7ms)
+
+

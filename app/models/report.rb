@@ -3,6 +3,6 @@ class Report < ApplicationRecord
   belongs_to :state
 
   has_many :comments
-  has_many :report_geolocations
+  has_one :report_geolocation
   has_one :address
 end

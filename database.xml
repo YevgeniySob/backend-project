@@ -61,11 +61,8 @@
     <part>id</part>
   </key>
 </table>
-  <table x="784" y="122" name="reports">
+  <table x="784" y="121" name="reports">
     <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="user_report" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
     <row name="title" null="1" autoincrement="0">
@@ -80,15 +77,16 @@
     <row name="image" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="link" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
     <row name="date" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
     <row name="time" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
+    <row name="id_users" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="users" row="id" />
+    </row>
     <row name="id_state" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="state" row="id" />
@@ -97,23 +95,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="582" y="77" name="user_reports">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="id_users" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="users" row="id" />
-    </row>
-    <row name="id_reports" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="reports" row="id" />
-    </row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-  </table>
-  <table x="1002" y="456" name="state">
+  <table x="559" y="421" name="state">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -130,9 +112,6 @@
   </table>
   <table x="995" y="30" name="address">
     <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="state" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
     <row name="city" null="1" autoincrement="0">
@@ -152,7 +131,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="583" y="369" name="comments">
+  <table x="619" y="34" name="comments">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -192,7 +171,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1001" y="288" name="report_geolocation">
+  <table x="993" y="284" name="report_geolocation">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -210,7 +189,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1212" y="504" name="country">
+  <table x="760" y="466" name="country">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
