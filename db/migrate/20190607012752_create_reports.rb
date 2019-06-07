@@ -1,0 +1,16 @@
+class CreateReports < ActiveRecord::Migration[5.2]
+  def change
+    create_table :reports do |t|
+      t.string :title
+      t.text :description
+      t.integer :votes
+      t.string :image
+      t.string :date
+      t.string :time
+      t.integer :state_id
+      t.integer :user_id
+
+      t.timestamps
+    end
+  end
+end
