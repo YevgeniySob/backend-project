@@ -7,4 +7,9 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true, case_sensitive: false
   # validates :email, presence: true, uniqueness: true, case_sensitive: false
+
+  def reports_num
+    self.reports.length
+  end
+
 end

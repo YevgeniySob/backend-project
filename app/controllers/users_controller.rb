@@ -7,26 +7,28 @@ class UsersController < ApplicationController
   end
 
   def index
-    @reports = Report.all
+    @reports = User.find_by(id: params[:id]).reports
     render json: @reports
   end
 
   def create
-    @user = User.new(first_name: params[:first_name], last_name: params[:last_name], username: params[:username], password: params[:password], email: params[:email])
-    if @user.save
-      render json: @user
+    user = User.new(user_params)
+    if user.save
+      user_id = user.id
+      token = encode_token(user_id)
+      render json: { user: UserSerializer.new(user), token: token }, status: 201
     else
-      puts 'blah'
+      render json: { errors: 'beep boop beep bop' }
     end
   end
 
-  def update
-
-  end
-
-  def delete
-
-  end
+  # def update
+  #
+  # end
+  #
+  # def delete
+  #
+  # end
 
   private
 

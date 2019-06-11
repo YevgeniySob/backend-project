@@ -23,6 +23,22 @@ class ReportsController < ApplicationController
 
   end
 
+  def report_by_state
+    # byebug
+    @reports = State.find_by(abbreviation: params[:state]).reports
+    render json: @reports
+  end
+
+  def vote
+    vote = params[:vote]
+    report = Report.find_by(id: params[:reportId])
+    if vote == 'up'
+      report.update(votes: report.votes += 1)
+    elsif vote == 'down'
+      report.update(votes: report.votes -= 1)
+    end
+  end
+
   private
 
   def find_report
