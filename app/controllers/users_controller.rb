@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
+
       user_id = user.id
       token = encode_token(user_id)
       render json: { user: UserSerializer.new(user), token: token }, status: 201

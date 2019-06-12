@@ -3,5 +3,4 @@ class UserSerializer < ActiveModel::Serializer
   has_one :user_geolocation
   # has_many :reports
 
-
 end
