@@ -15,9 +15,8 @@ class AuthController < ApplicationController
     if curr_user
       render json: curr_user
     else
-      render json: { errors: 'beep boop beep bop' }
+      render json: { errors: 'Not Found' }
     end
   end
-
 end
 

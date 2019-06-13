@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dont-mess
+  api_key: '859439348421714'
+  api_secret: zc4CT1zeyndIM0ZdMJBX5Fpub0U
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dont-mess
+  api_key: '859439348421714'
+  api_secret: zc4CT1zeyndIM0ZdMJBX5Fpub0U
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dont-mess
+  api_key: '859439348421714'
+  api_secret: zc4CT1zeyndIM0ZdMJBX5Fpub0U
+  enhance_image_tag: true
+  static_file_support: false

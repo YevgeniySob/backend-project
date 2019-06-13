@@ -12,7 +12,22 @@ class ReportsController < ApplicationController
   end
 
   def create
+    # Cloudinary::Uploader.upload("image file", :public_id => 'uniq_id')
+    byebug
+    # /w_130,h_100,c_fill/
+    state_id = State.find_by(abbreviation: params[:state]).id
+    report = Report.new(description: params[:description], title: params[:title], date: params[:date], state_id: state_id, votes: 0, user_id: params[:id])
+    if report.save
+      id = report.id
+      Cloudinary::Uploader.upload(params[:image].tempfile, public_id: report.id)
+      report.update(image: "https://res.cloudinary.com/dont-mess/image/upload/w_500/#{id}.jpg")
+      Address.create(city: params[:city], street: params[:street], zipcode: params[:zipcode], report_id: id)
+      ReportGeolocation.create(latitude: params[:latitude], longitude: params[:longitude], report_id: id)
 
+      render json: ReportSerializer.new(report)
+    else
+      render json: {error: 'get outahere'}
+    end
   end
 
   def update

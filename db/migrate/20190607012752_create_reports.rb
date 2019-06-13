@@ -4,7 +4,7 @@ class CreateReports < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.integer :votes
-      t.string :image
+      t.text :image
       t.string :date
       t.string :time
       t.integer :state_id
