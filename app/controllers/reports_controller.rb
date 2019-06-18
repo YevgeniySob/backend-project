@@ -11,9 +11,15 @@ class ReportsController < ApplicationController
     render json: @reports
   end
 
+  def new_comment
+    report = Report.find_by(id: params[:reportId])
+    report.comments.create(content: params[:content], report_id: params[:reportId], user_id: params[:userId])
+
+    render json: report
+  end
+
   def create
     # Cloudinary::Uploader.upload("image file", :public_id => 'uniq_id')
-    byebug
     # /w_130,h_100,c_fill/
     state_id = State.find_by(abbreviation: params[:state]).id
     report = Report.new(description: params[:description], title: params[:title], date: params[:date], state_id: state_id, votes: 0, user_id: params[:id])

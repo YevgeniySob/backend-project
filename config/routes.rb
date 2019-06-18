@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   get '/reports', to: 'reports#index'
   post '/report_vote', to: 'reports#vote'
   get '/report_by_state', to: 'reports#report_by_state'
-
+  post '/add_comment', to: 'reports#new_comment'
 end

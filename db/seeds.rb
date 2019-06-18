@@ -147,13 +147,13 @@ end
 end
 
 count = 1
-20.times do
+Report.all.length.times do
   Address.create(city: Faker::Address.city, street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, report_id: count)
   count += 1
 end
 
 count = 1
-5.times do
+Report.all.length.times do
   ReportGeolocation.create(latitude: Faker::Address.latitude, longitude: Faker::Address.longitude, report_id: count)
   count += 1
 end
