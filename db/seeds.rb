@@ -9,13 +9,13 @@
 User.create(username: 'yev', password: '123', first_name: 'Yevgeniy', last_name: 'Sobolev')
 
 count = 1
-5.times do
+20.times do
   count += 10
   User.create(username: Faker::Internet.username, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: '123', email: Faker::Internet.email, image: "https://picsum.photos/id/#{count}/200/200")
 end
 
 count = 1
-5.times do
+User.all.length.times do
   UserGeolocation.create(latitude: Faker::Address.latitude, longitude: Faker::Address.longitude, user_id: count)
   count += 1
 end

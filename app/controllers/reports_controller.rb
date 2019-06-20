@@ -13,7 +13,7 @@ class ReportsController < ApplicationController
 
   def new_comment
     report = Report.find_by(id: params[:reportId])
-    report.comments.create(content: params[:content], report_id: params[:reportId], user_id: params[:userId])
+    report.comments.create(content: params[:content], report_id: params[:reportId], user_id: params[:userId], points: 0)
 
     render json: report
   end
@@ -36,12 +36,19 @@ class ReportsController < ApplicationController
     end
   end
 
-  def update
-
-  end
-
-  def delete
-
+  def points
+    # byebug
+    comment = Comment.find_by id: params[:commentId]
+    direction = params[:where]
+    if direction == 'up'
+      comment.update(points: comment.points + 1)
+      render json: comment
+    elsif direction == 'down'
+      comment.update(points: comment.points - 1)
+      render json: comment
+    else
+      render json: { error: 'cant upvote or downvote comment' }
+    end
   end
 
   def report_by_state

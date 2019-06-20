@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post '/report_vote', to: 'reports#vote'
   get '/report_by_state', to: 'reports#report_by_state'
   post '/add_comment', to: 'reports#new_comment'
+  post '/points', to: 'reports#points'
 end
