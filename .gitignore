@@ -42,3 +42,5 @@ build/
 log/
 
 config/cloudinary\.yml
+
+\.byebug_history
