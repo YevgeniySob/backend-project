@@ -1,4 +1,4 @@
-User.create(username: 'yev', password: '123', first_name: 'Yevgeniy', last_name: 'Sobolev')
+User.create(username: 'test', password: '123', first_name: 'Yevgeniy', last_name: 'Sobolev')
 
 count = 1
 50.times do

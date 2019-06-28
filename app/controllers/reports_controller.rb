@@ -21,7 +21,6 @@ class ReportsController < ApplicationController
   def create
     # Cloudinary::Uploader.upload("image file", :public_id => 'uniq_id')
     # /w_130,h_100,c_fill/
-    byebug
     state_id = State.find_by(abbreviation: params[:state]).id
     report = Report.new(description: params[:description], title: params[:title], date: params[:date], state_id: state_id, votes: 0, user_id: params[:id])
     if report.save
@@ -38,7 +37,6 @@ class ReportsController < ApplicationController
   end
 
   def points
-    # byebug
     comment = Comment.find_by id: params[:commentId]
     direction = params[:where]
     if direction == 'up'
@@ -53,7 +51,6 @@ class ReportsController < ApplicationController
   end
 
   def report_by_state
-    # byebug
     @reports = State.find_by(abbreviation: params[:state]).reports
     render json: @reports
   end
