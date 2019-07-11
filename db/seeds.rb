@@ -1,7 +1,7 @@
 User.create(username: 'test', password: '123', first_name: 'Yevgeniy', last_name: 'Sobolev')
 
 count = 1
-50.times do
+10.times do
   count += 10
   User.create(username: Faker::Internet.username, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: '123', email: Faker::Internet.email, image: "https://picsum.photos/id/#{count}/50/50")
 end
@@ -130,7 +130,7 @@ end
 count = 1
 State.all.length.times do
   picnum = 13
-  20.times do
+  5.times do
     Report.create(title: Faker::Lorem.sentence(2), description: Faker::Lorem.paragraph, votes: 0, image: "https://picsum.photos/id/#{picnum}/500/300", date: Faker::Date.between(2.days.ago, Date.today), state_id: count, user_id: User.all.sample.id)
     picnum += rand(1...5)
   end

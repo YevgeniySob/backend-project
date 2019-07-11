@@ -32,7 +32,7 @@ class ReportsController < ApplicationController
 
       render json: ReportSerializer.new(report)
     else
-      render json: {error: 'get outahere'}
+      render json: {error: 'cant create report'}
     end
   end
 
